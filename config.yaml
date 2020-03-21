@@ -4,3 +4,8 @@ staticPath: ../web
 
 server-host: 0.0.0.0
 server-port: 3000
+
+mysql-credential-name: root
+mysql-credential-pw: groot321123
+
+dataFile: ../DataIn.txt

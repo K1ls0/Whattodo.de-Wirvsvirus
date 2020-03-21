@@ -1,0 +1,104 @@
+>Zeichne ein Portrait
+Kreativ
+>Schreibe ein Gedicht
+Kreativ
+>Male etwas mit nur drei Farben
+Kreativ
+>Zeichne ein Bild, ohne mit dem Stift abzusetzen
+Kreativ
+>Falte ein Origami
+Kreativ,Lernen
+>Schreibe ein Elfchen.
+Kreativ
+>Kritzle eine Linie zufällig auf ein Blatt und mach ein Bild daraus.
+Kreativ
+>Denk dir ein eigenes Brettspiel aus.
+Kreativ
+>Schreib einen eigenen Song.
+Kreativ,Lernen
+>Schreibe eine Kurzgeschichte.
+Kreativ
+>Baue eine Skulptur von einem Tier aus Dingen, die dir zu Verfügung stehen.
+Kreativ
+>Suche 10 Städte heraus, die du später Bereisen willst, die weniger als 100,000 Einwohner hat.
+Kreativ,Lernen
+>Schreibe deine eigene Choose-Your-Own-Adventure Geschichte.
+Kreativ
+>Schreibe eine Kurzgeschichte, ohne 5 selbst gewählte Buchstaben zu verwenden.
+Kreativ
+>Entwickle ein eigenes Rezept.
+Kreativ
+>Backe einen Kuchen
+Kreativ
+>Bau eine Kettenreaktion aus Dingen die in der Nähe sind.
+Kreativ,Sport und Geschick
+>Macht eine Klappgeschichte. Alle Personen Schreiben 3 Sätzen für den Anfang einer Geschichte. Nun klappt die die ersten 2 Sätze weg so das nur noch der letzte Satz zu sehen ist. Gebt das Blatt an einen Nachbarn weiter. Wiederholt den Vorgang beliebig oft und lest die Resultate.
+Kreativ,Mehrspieler
+>Lernt wie man Dungeons and Dragons spielt
+Kreativ,Lernen,Mehrspieler
+>Mach 10 Liegestütze, 10 Situps und 10 Hock>Strecksprünge.
+Sport und Geschick
+>Sockenboule; Such verschiedenfarbige Socken (z.B. 3 Weiße, 3 Schwarze und 1 Blaue) und forme sie zu Kugeln, wirf eine Kugel, hier Blau, in den Flur, wer am nächsten an die Kugel wirft gewinnt. Werft abwechselnd.
+Sport und Geschick,Mehrspieler
+>Meditiere für 15min.
+Kreativ,Sport und Geschick,Lernen
+>Versuch eine 1 Euro Münze von der Tischkante in eine Tasse zu schnipsen.
+Sport und Geschick
+>Lerne mit 3 Bällen oder anderen nicht zerbrechlichen Gegenständen zu jonglieren.
+Sport und Geschick
+>Spielt verstecken.
+Spielen,Sport und Geschick,Mehrspieler
+>Lerne eine Karte in einen Apfel zu werfen (ja das geht)
+Sport und Geschick
+>Lerne ein Buch auf der Fingerspitze wie einen Basketball zu spinnen.
+Sport und Geschick
+>Lerne einen Apfel in zwei Hälften zu teilen, nur mit den Händen.
+Sport und Geschick
+>Improvisiere einen Basketballkorb und treffe so viele Socken von so weit wie möglich weg hintereinander.
+Sport und Geschick
+>Nimm ein ca. 4 Mal 4cm großen Gegenstand der nicht zerbrechlich ist, setzt dich mehr als 2 Meter von einer Wand hin, gebe dem Objekt einen Schubs, wer näher an der Wand ist, ohne sie zu berühren gewinnt
+Sport und Geschick,Mehrspieler
+>Male Schnurrbärte auf eine Zeitung oder Zeitschrift.
+Verrückt, Kreativ
+>Bau eine Höhle aus Kissen und Decken.
+Verrückt,Kreativ
+>Bewege dich nur auf einem Bein für die nächsten 20 Minuten.
+Verrückt
+>Zähle bis 1000
+Verrückt
+>Mach ein Daumenkino
+Kreativ
+>Lerne Morsecode zu lesen.
+Lernen
+>Lerne Noten zu lesen.
+Lernen,Kreativ
+>Lies das erste Buch, dass du findest.
+Lernen
+>Lerne die Hauptgruppen des Periodensystems.
+Lernen
+>Schreibe einen kleinen Lebenslauf.
+Lernen
+>Lerne das griechische oder lateinische Alphabet
+Lernen
+>Lerne alle Mitglieder aus der Europäischen Union.
+Lernen
+>Lerne alle amerikanischen Staaten.
+Lernen
+>Lerne eine Programmiersprache.
+Lernen
+>Lerne die ersten hundert Stellen von Pi.
+Lernen
+>Befasse dich mit einem Thema, mit dem du noch nie Kontakt hattest (z.B. Flechten,).
+Lernen
+>Lerne 40 neue Wörter einer anderen Sprache.
+Lernen
+>Pokert
+Spielen
+>Macht ein Wikipedia Battle: Ziel ist es von einem Gemeinsamen Wikipedia Start Artikel, (z.B. Honigbiene) zu einem anderen Ziel Artikel (z.B. Bundesrepublik) schneller als der Gegner zu gelangen, dabei dürfen nur Blau markierte Begriffe verwendet werden, um von Artikel zu Artikel zu springen.
+Spielen
+>Lerne deine eigene Website zu erstellen.
+Lernen,Kreativ
+>Schreibe Postkarten an Menschen die du kennst.
+Kreativ
+>Spielt Mumie: Einer Person werden die Augen verbunden, sie muss die anderen in einem kleinen Raum fangen und ertasten, rät sie richtig, ist die erratene Person jetzt Mumie.
+Sport und Geschick,Spielen,Mehrspieler

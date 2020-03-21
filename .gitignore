@@ -1,3 +1,6 @@
 .idea
 node_modules
+Webserver/static/react/*
+package-lock.json
 __pycache__
+

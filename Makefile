@@ -4,3 +4,9 @@ install:
 run:
 	cd ./web; npm run build; cd ..
 	cd ./Webserver && python3 ./app.py
+
+httpGetElements:
+	curl -H "Content-Type: application/json" --request GET --data '{"tags":["Kreativ"],"include":false}' "http://0.0.0.0:3000/elements"
+
+httpGetTags:
+	curl -H "Content-Type: application/json" --request GET "http://0.0.0.0:3000/tags"
