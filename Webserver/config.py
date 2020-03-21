@@ -27,6 +27,9 @@ class ConfigParser:
         if self.parsedConf.has_section(MAIN_SECTION):
             self.useDatabase = self.parsedConf[MAIN_SECTION].getboolean('useDatabase', False)
             self.staticPath = self.parsedConf[MAIN_SECTION].get('staticPath', '../web')
+            self.serverHost = self.parsedConf[MAIN_SECTION].get('server-host', '0.0.0.0')
+            self.serverPort = self.parsedConf[MAIN_SECTION].get('server-port', '3000')
+
         else:
             self.logger.error('Error: No Main section named "%s" found in config file %s', MAIN_SECTION, self.configPath)
 
