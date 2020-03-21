@@ -1,0 +1,3 @@
+[main]
+useDatabase: false
+staticPath: '../web'
