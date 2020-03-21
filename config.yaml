@@ -1,6 +1,6 @@
 [main]
 useDatabase: false
-staticPath: '../web'
+staticPath: ../web
 
-server-host: '0.0.0.0'
-server-port: '3000'
+server-host: 0.0.0.0
+server-port: 3000
