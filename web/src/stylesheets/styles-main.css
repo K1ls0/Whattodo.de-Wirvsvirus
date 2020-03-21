@@ -1,0 +1,33 @@
+@import url("https://use.typekit.net/hls0zmg.css");
+
+:root{
+    --feather: #77C9D4;
+    --marine: #57BC90;
+    --forest: #015249;
+    --sleek-grey: #A5A5AF;
+    --white: #FFFFFF;
+}
+
+html, body {
+    background-color: var(--white);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .flex-container-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .flex-container-logo img {
+
+}
+
+p.logo-text {
+    font-family: axia, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
