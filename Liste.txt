@@ -113,7 +113,7 @@ Produktiv
 >Räum das Haus/die Wohnung auf.
 Produktiv
 >Dekoriere dein Zimmer um.
-Kreativ,Prodiktiv
+Kreativ,Produktiv
 >Mach den Abwasch.
 Produktiv
 >Macht ein Armdrücken Turnier.
