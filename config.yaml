@@ -6,10 +6,11 @@ staticPath: ../web
 server-host: 0.0.0.0
 server-port: 3000
 
-mysql-credential-name: mysql
-mysql-credential-pw: groot321123
-mysql-database-name: Data
-mysql-database-host: 127.0.0.1
+mysql-credential-name: ''
+mysql-credential-pw: 
+mysql-database-name: 
+mysql-database-host: 
 
-dataFile: ../DataIn.txt
+dataFile: ../Liste.txt
+dataFileEncoding: utf8
 newDataQueryFile: ../DataNew.txt

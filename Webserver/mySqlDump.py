@@ -1,8 +1,11 @@
 import os
+import logging
 from config import getConfigInstance
 
 logger = logging.getLogger(__name__)
 config = getConfigInstance()
+
+ENCODING = config.dataFileEncoding
 
 
 def filterExcluding(data, tags):
@@ -39,12 +42,12 @@ def filterIncluding(data, tags):
 class SQLAdapter:
     def __init__(self):
         if not (os.path.exists(config.dataFile) and os.path.isfile(config.dataFile)):
-            with open(config.dataFile, 'w') as f:
+            with open(config.dataFile, 'w', ENCODING=ENCODING) as f:
                 f.write('>Test-task\n')
                 f.write('Tag1,Tag2,Tag3')
 
         lines = []
-        with open(config.dataFile, 'r+') as f:
+        with open(config.dataFile, 'r+', encoding=ENCODING) as f:
             lines = f.readlines()
 
         # actual Data
@@ -71,7 +74,7 @@ class SQLAdapter:
         return data
 
     def serialize(self, datadict, mode):
-        with open(config.newDataQueryFile, mode) as f:
+        with open(config.newDataQueryFile, mode, ENCODING=ENCODING) as f:
             for cKey in datadict.keys():
                 f.write('>{}\n'.format(cKey))
                 for cTagIndex in range(len(datadict[cKey])):
