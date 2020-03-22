@@ -3,41 +3,44 @@ const ELEM_INTERACTION_URL = '/elements';
 
 resp = null; // Make more secure
 
-function requestTags() {
+function requestTags(handlingFunction) {
     let xhr = new XMLHttpRequest();
     resp = null;
     xhr.addEventListener('load', () => {
-        global resp;
-        resp = xhr.responseText();
+        if (xhr.status != 200) {
+            handlingFunction(null);
+        } else {
+            handlingFunction(JSON.parse(xhr.responseText()));
+        }
     });
 
     xhr.open('GET', TAGS_URL);
     xhr.send();
-    // TODO return as structure
-    return JSON.parse(resp);
 }
 
-function getIdeasByFilter(tagArr, doInclude) {
+function getIdeasByFilter(tagArr, doInclude, handlingFunction) {
     let xhr = new XMLHttpRequest();
     resp = null;
     xhr.addEventListener('load', () => {
-        if (this)
-        global resp;
-        resp = xhr.responseText();
+        if (xhr.status != 200) {
+            handlingFunction(null);
+        } else {
+            handlingFunction(JSON.parse(xhr.responseText()));
+        }
     });
 
     xhr.open('GET', ELEM_INTERACTION_URL);
     xhr.send(JSON.stringify(tags: tagArr, include: doInclude));
-
-    return JSON.parse(resp); // TODO return as structure
 }
 
-function pushNewIdea(ideaText, tagArr) {
+function pushNewIdea(ideaText, tagArr, handlingFunction) {
     let xhr = new XMLHttpRequest();
-    resp = null;
     xhr.addEventListener('load', () => {
-        global resp;
-        resp = xhr.responseText();
+        if (xhr.status != 200) {
+            handlingFunction(null);
+        } else {
+            handlingFunction(JSON.parse(xhr.responseText()));
+        }
     });
     //Prepare json string manually (Javascript cannot do that)
     let tagsAsStr ='[';
@@ -52,6 +55,4 @@ function pushNewIdea(ideaText, tagArr) {
 
     xhr.open('PUT', ELEM_INTERACTION_URL);
     xhr.send('{"' + ideaText + '":' + tagsAsStr + '}');
-
-    return JSON.parse(resp); // TODO return as structure
 }
