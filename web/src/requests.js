@@ -3,14 +3,14 @@ const ELEM_INTERACTION_URL = '/elements';
 
 let resp = null; // Make more secure
 
-export function requestTags(handlingFunction) {
+export function requestTags(handlingFunction, thisC) {
     let xhr = new XMLHttpRequest();
     resp = null;
     xhr.addEventListener('load', () => {
         if (xhr.status != 200) {
-            handlingFunction(null);
+            handlingFunction(null, thisC);
         } else {
-            handlingFunction(JSON.parse(xhr.responseText));
+            handlingFunction(JSON.parse(xhr.responseText), thisC);
         }
     });
 
@@ -18,14 +18,14 @@ export function requestTags(handlingFunction) {
     xhr.send();
 }
 
-export function getIdeasByFilter(tagArr, doInclude, handlingFunction) {
+export function getIdeasByFilter(tagArr, doInclude, handlingFunction, thisC) {
     let xhr = new XMLHttpRequest();
     resp = null;
     xhr.addEventListener('load', () => {
         if (xhr.status != 200) {
-            handlingFunction(null);
+            handlingFunction(null, thisC);
         } else {
-            handlingFunction(JSON.parse(xhr.responseText));
+            handlingFunction(JSON.parse(xhr.responseText), thisC);
         }
     });
 
@@ -33,14 +33,14 @@ export function getIdeasByFilter(tagArr, doInclude, handlingFunction) {
     xhr.send(JSON.stringify({tags: tagArr, include: doInclude}));
 }
 
-export function pushNewIdea(ideaText, tagArr, handlingFunction) {
+export function pushNewIdea(ideaText, tagArr, handlingFunction, thisC) {
     let xhr = new XMLHttpRequest();
     resp = null;
     xhr.addEventListener('load', () => {
         if (xhr.status != 200) {
-            handlingFunction(null);
+            handlingFunction(null, thisC);
         } else {
-            handlingFunction(JSON.parse(xhr.responseText));
+            handlingFunction(JSON.parse(xhr.responseText), thisC);
         }
     });
     //Prepare json string manually (Javascript cannot do that)
