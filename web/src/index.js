@@ -8,14 +8,19 @@ import {TagList} from "./tag-list";
 
 const Source = (props) => {
     return <div>
-        <div className={"header"}>
-            <FlexContainerLogo />
-            <Button />
+        <div className={"sticky"} >
+            <div className={"header"} >
+                <FlexContainerLogo />
+                <Button />
+            </div>
         </div>
         <div className={"content"}>
             <Landing />
             <div className={"tag-wrapper"} >
                 <TagList />
+            </div>
+            <div className={"idea"} >
+                <p>Random Idea based on your chosen tags</p>
             </div>
         </div>
     </div>

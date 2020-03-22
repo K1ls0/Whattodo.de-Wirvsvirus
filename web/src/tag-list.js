@@ -4,7 +4,7 @@ import "./stylesheets/styles-main.css";
 
 export class TagItem extends React.Component {
     render() {
-        return <p>{this.props.label}</p>
+        return <p className={"tag"}>{this.props.label}</p>
     }
 }
 
@@ -46,6 +46,7 @@ export class TagList extends React.Component {
             <div className={"tag-container"} >
                 {this.renderTagItems()}
             </div>
+            <p className={"tag"}>Hier klicken um die Auswahl zu bestätigen</p>
         </div>;
     }
 }
