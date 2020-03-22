@@ -1,16 +1,16 @@
 const TAGS_URL = '/tags';
 const ELEM_INTERACTION_URL = '/elements';
 
-resp = null; // Make more secure
+let resp = null; // Make more secure
 
-function requestTags(handlingFunction) {
+export function requestTags(handlingFunction) {
     let xhr = new XMLHttpRequest();
     resp = null;
     xhr.addEventListener('load', () => {
         if (xhr.status != 200) {
             handlingFunction(null);
         } else {
-            handlingFunction(JSON.parse(xhr.responseText()));
+            handlingFunction(JSON.parse(xhr.responseText));
         }
     });
 
@@ -18,36 +18,37 @@ function requestTags(handlingFunction) {
     xhr.send();
 }
 
-function getIdeasByFilter(tagArr, doInclude, handlingFunction) {
+export function getIdeasByFilter(tagArr, doInclude, handlingFunction) {
     let xhr = new XMLHttpRequest();
     resp = null;
     xhr.addEventListener('load', () => {
         if (xhr.status != 200) {
             handlingFunction(null);
         } else {
-            handlingFunction(JSON.parse(xhr.responseText()));
+            handlingFunction(JSON.parse(xhr.responseText));
         }
     });
 
     xhr.open('GET', ELEM_INTERACTION_URL);
-    xhr.send(JSON.stringify(tags: tagArr, include: doInclude));
+    xhr.send(JSON.stringify({tags: tagArr, include: doInclude}));
 }
 
-function pushNewIdea(ideaText, tagArr, handlingFunction) {
+export function pushNewIdea(ideaText, tagArr, handlingFunction) {
     let xhr = new XMLHttpRequest();
+    resp = null;
     xhr.addEventListener('load', () => {
         if (xhr.status != 200) {
             handlingFunction(null);
         } else {
-            handlingFunction(JSON.parse(xhr.responseText()));
+            handlingFunction(JSON.parse(xhr.responseText));
         }
     });
     //Prepare json string manually (Javascript cannot do that)
     let tagsAsStr ='[';
     for (let i = 0; i < tagArr.length; i++) {
         tagsAsStr +='"' + tagArr[i] + '"'
-        if (i != (tagArr.length - 1)) {
-            tatgsAsStr += ','
+        if (i !== (tagArr.length - 1)) {
+            tagsAsStr += ','
         }
 
     }

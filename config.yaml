@@ -1,6 +1,6 @@
 [main]
 serverDebug: true
-useDatabase: true
+useDatabase: false
 staticPath: ../web
 
 server-host: 0.0.0.0
