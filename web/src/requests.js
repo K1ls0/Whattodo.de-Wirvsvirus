@@ -15,6 +15,7 @@ export function requestTags(handlingFunction, thisC) {
     });
 
     xhr.open('GET', TAGS_URL);
+    xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
     xhr.send();
 }
 
@@ -30,6 +31,7 @@ export function getIdeasByFilter(tagArr, doInclude, handlingFunction, thisC) {
     });
 
     xhr.open('GET', ELEM_INTERACTION_URL);
+    xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
     xhr.send(JSON.stringify({tags: tagArr, include: doInclude}));
 }
 
@@ -55,5 +57,6 @@ export function pushNewIdea(ideaText, tagArr, handlingFunction, thisC) {
     tagsAsStr += ']';
 
     xhr.open('PUT', ELEM_INTERACTION_URL);
+    xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
     xhr.send('{"' + ideaText + '":' + tagsAsStr + '}');
 }
