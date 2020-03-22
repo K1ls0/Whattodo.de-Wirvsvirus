@@ -32,8 +32,11 @@ class ConfigParser:
             self.dataFile = self.parsedConf[MAIN_SECTION].get('dataFile', '../DataIn.txt')
             self.newDataQueryFile = self.parsedConf[MAIN_SECTION].get('newDataQueryFile', '../DataNew.txt')
             self.serverDebug = self.parsedConf[MAIN_SECTION].getboolean('serverDebug', False)
+
             self.mysqlCredentialName = self.parsedConf[MAIN_SECTION].get('mysql-credential-name', 'root')
-            self.mysqlCredentialpw = self.parsedConf[MAIN_SECTION].get('mysql-credential-pw', '')
+            self.__mysqlCredentialpw = self.parsedConf[MAIN_SECTION].get('mysql-credential-pw', '')
+            self.mysqlDataBaseName = self.parsedConf[MAIN_SECTION].get('mysql-database-name', 'Data')
+            self.mysqlDataBaseHost = self.parsedConf[MAIN_SECTION].get('mysql-database-Host', '127.0.0.1')
 
         else:
             self.logger.error('Error: No Main section named "%s" found in config file %s', MAIN_SECTION, self.configPath)
@@ -42,11 +45,20 @@ class ConfigParser:
         self.logger.info('Loaded config with: staticPath: "%s"', self.staticPath)
         self.logger.info('Loaded config with: server-host: "%s"', self.serverHost)
         self.logger.info('Loaded config with: server-port: "%d"', self.serverPort)
+        self.logger.info('Loaded config with: mysqlDataBaseName: "%s"', self.mysqlDataBaseName)
         self.logger.info('Loaded config with: mysqlCredentials: "%s"', self.mysqlCredentialName)
         self.logger.info('Loaded config with: serverDebug: "%b"', self.serverDebug)
+        self.logger.info('Loaded config with: serverDebug: "%s"', self.mysqlDataBaseName)
 
     def reloadConfig(self):
         self.loadConfig()
+
+    def popMySqlPasswd(self):
+        if self.__mysqlCredentialpw is None:
+            return ""
+        pw = self.__mysqlCredentialpw
+        del self.__mysqlCredentialpw
+        return pw
 
 
 def getConfigInstance():
