@@ -9,3 +9,4 @@ mysql-credential-name: root
 mysql-credential-pw: groot321123
 
 dataFile: ../DataIn.txt
+newDataQueryFile: ../DataNew.txt

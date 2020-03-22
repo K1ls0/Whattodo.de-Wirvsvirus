@@ -60,6 +60,18 @@ def getElementsByTags():
     return jsonify(sqlAdapt.getByTags(tags, doInclude))
 
 
+@app.route('/elements', methods=['PUT'])
+def createNewElement():
+    if not request.is_json:
+        return jsonify(getErrorMsg(400, "Invalid request structure"))
+    req = request.get_json()
+    if len(req.keys()) == 0:
+        return jsonify(getErrorMsg(400, "Invalid request structure"))
+
+    sqlAdapt.queryNew(req)
+    return jsonify({'success': True, 'payload': None})
+
+
 if __name__ == "__main__":
     print("{}:{}".format(config.serverHost, config.serverPort))
     app.run(host=config.serverHost, port=config.serverPort, debug=True)

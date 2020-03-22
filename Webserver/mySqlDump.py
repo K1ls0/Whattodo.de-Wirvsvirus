@@ -51,9 +51,13 @@ class SQLAdapter:
 
         # actual Data
 
-        self.data = dict()
+        self.data = self.deserialize(lines)
 
+        self.updateClassification()
+
+    def deserialize(self, lines):
         i = 0
+        data = dict()
         while i < len(lines):
             if i < (len(lines)-1) and lines[i].startswith('>') and len(lines[i]) > 1:
                 idea = lines[i][1:].rstrip()
@@ -64,10 +68,22 @@ class SQLAdapter:
                 for cI in range(len(tags)):
                     tags[cI] = tags[cI].strip()
 
-                self.data[idea] = tags
+                data[idea] = tags
             i += 1
+        return data
 
-        self.updateClassification()
+    def serialize(self, datadict, mode):
+        with open(config.newDataQueryFile, mode) as f:
+            for cKey in datadict.keys():
+                f.write('>{}\n'.format(cKey))
+                for cTagIndex in range(len(datadict[cKey])):
+                    f.write(datadict[cKey][cTagIndex])
+                    if cTagIndex != len(datadict[cKey]) - 1:
+                        f.write(',')
+                f.write('\n')
+
+
+
 
     def updateClassification(self):
 
@@ -99,6 +115,9 @@ class SQLAdapter:
             return filterIncluding(self.data, filteredTags)
         else:
             return filterExcluding(self.data, filteredTags)
+
+    def queryNew(self, data):
+        self.serialize(data, 'a')
 
     def __str__(self):
         retStr = ''

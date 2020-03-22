@@ -30,6 +30,7 @@ class ConfigParser:
             self.serverHost = self.parsedConf[MAIN_SECTION].get('server-host', '0.0.0.0')
             self.serverPort = self.parsedConf[MAIN_SECTION].getint('server-port', 3000)
             self.dataFile = self.parsedConf[MAIN_SECTION].get('dataFile', '../DataIn.txt')
+            self.newDataQueryFile = self.parsedConf[MAIN_SECTION].get('newDataQueryFile', '../DataNew.txt')
             self.mysqlCredentialName = self.parsedConf[MAIN_SECTION].get('mysql-credential-name', 'root')
             self.mysqlCredentialpw = self.parsedConf[MAIN_SECTION].get('mysql-credential-pw', '')
 
