@@ -27,7 +27,6 @@ def getErrorMsg(code, msg):
 
 # Main Route:
 
-
 @app.route('/', methods=['GET'])
 def redirectHome():
     return redirect('/home')
@@ -39,7 +38,6 @@ def routeHome():
 
 
 # Tag requests
-
 
 @app.route('/tags', methods=['GET'])
 def getAllTags():
@@ -74,4 +72,4 @@ def createNewElement():
 
 if __name__ == "__main__":
     print("{}:{}".format(config.serverHost, config.serverPort))
-    app.run(host=config.serverHost, port=config.serverPort, debug=True)
+    app.run(host=config.serverHost, port=config.serverPort, debug=config.serverDebug)

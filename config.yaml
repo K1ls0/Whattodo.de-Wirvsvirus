@@ -1,4 +1,5 @@
 [main]
+serverDebug: true
 useDatabase: false
 staticPath: ../web
 
