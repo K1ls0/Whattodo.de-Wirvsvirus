@@ -24,6 +24,14 @@ body {
     overflow-y: scroll;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+}
+
 .landing-wrapper {
     box-sizing: border-box;
     min-height: 100vh;
@@ -51,7 +59,7 @@ body {
     display: block;
     background-size: cover;
     transform-origin: center center 0;
-    transform: translateZ(-2px) scale(2.5);
+    transform: translateZ(-2px) scale(3);
     z-index: -2;
     min-height: 100vh;
     background-image: url("../img/LandingBack.png");
@@ -95,6 +103,7 @@ body {
     top: 0;
     left: 0;
     transform: translateY(-250px);
+    border-left: 5px solid #FFFFFF;
     margin: 100px 100px;
 }
 
@@ -104,10 +113,10 @@ body {
     font-style: italic;
     font-size: 100px;
     text-align: left;
+    text-shadow: -2px 0 #1d2729, 0 2px #1d2729, 2px 0 #1d2729, 0 -2px #1d2729;
     margin: 0;
     line-height: 85%;
     padding: 30px 30px 30px 30px;
-    color: ;
 }
 
 .landing-wrapper .landing-container .landing-introduction {
@@ -115,22 +124,77 @@ body {
     top: 170vh;
     height: 50vh;
     width: 100vw;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
     background-color: #1d2729;
     transform: translateY(-500px) translateZ(-1px) scale(2);
     z-index: -1;
 }
 
-.landing-wrapper .landing-container .landing-introduction p {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-family: rift-soft, sans-serif;
-    font-weight: 700;
-    font-style: italic;
-    font-size: 100px;
+.landing-wrapper .landing-container .landing-introduction img {
+    height: 30vh;
+    width: auto;
+    padding-top: 50px;
+    margin-right: 100px;
 }
+
+.landing-wrapper .landing-container .landing-introduction p {
+    width: 40vw;
+    display: block;
+    text-align: justify;
+    font-family: acumin-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    padding-top: 50px;
+    margin-left: 100px;
+    border-top: 5px solid #FFFFFF;
+}
+
+.tag-wrapper {
+    position: absolute;
+    top: 210vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: auto;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #FFFFFF;
+}
+
+.flag-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 10px;
+    width: 100vw;
+}
+
+.flag-wrapper .black {
+    width: 33vw;
+    height: 10px;
+    background-color: black;
+}
+
+.flag-wrapper .red {
+    width: 34vw;
+    height: 10px;
+    background-color: #de0000;
+}
+
+.flag-wrapper .yellow {
+    width: 33vw;
+    height: 10px;
+    background-color: #ffcf00;
+}
+
+
 
 
 /*
