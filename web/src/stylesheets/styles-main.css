@@ -1,4 +1,4 @@
-@import url("https://use.typekit.net/hls0zmg.css");
+@import url("https://use.typekit.net/onw8adv.css");
 
 :root{
     --feather: #77C9D4;
@@ -8,26 +8,137 @@
     --white: #FFFFFF;
 }
 
-html, body {
-    background-color: var(--white);
+html {
+    height: 100%;
+    overflow: hidden;
 }
 
-.header {
+body {
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.landing-wrapper {
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 30vw 0 5vw;
+    position: relative;
+    transform-style: inherit;
+    width: 100vw;
+}
+
+.landing-wrapper .landing-container .landing-text p {
+    margin-top: -100px;
+}
+
+.landing-wrapper, .landing-wrapper:before {
+    background: 50% 50% / cover;
+}
+
+.landing-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    background-size: cover;
+    transform-origin: center center 0;
+    transform: translateZ(-2px) scale(2.5);
+    z-index: -2;
+    min-height: 100vh;
+    background-image: url("../img/LandingBack.png");
+}
+
+.landing-container {
+    box-sizing: border-box;
+    min-height: 100vh;
+    position: relative;
+    transform-style: inherit;
+    width: 100vw;
+}
+
+.landing-container, .landing-container:before {
+    background: 50% 50% / cover;
+}
+
+.landing-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    background-size: cover;
+    height: 100vh;
+    width: auto;
+    transform-origin: center center 0;
+    transform: translateY(-500px) translateZ(-1px) scale(2);
+    z-index: -1;
+    background-image: url("../img/LandingFront.png");
+}
+
+.landing-wrapper .landing-container .landing-text {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 65vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-250px);
+    margin: 100px 100px;
 }
 
-.header .flex-container-logo {
-    display: flex;
-    align-items: center;
+.landing-wrapper .landing-container .landing-text p {
+    font-family: rift-soft, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 100px;
+    text-align: left;
+    margin: 0;
+    line-height: 85%;
+    padding: 30px 30px 30px 30px;
+    color: ;
 }
 
-.header .flex-container-logo img {
-
+.landing-wrapper .landing-container .landing-introduction {
+    position: absolute;
+    top: 170vh;
+    height: 50vh;
+    width: 100vw;
+    background-color: #1d2729;
+    transform: translateY(-500px) translateZ(-1px) scale(2);
+    z-index: -1;
 }
 
-p.logo-text {
-    font-family: axia, sans-serif;
-    font-weight: 900;
-    font-style: normal;
+.landing-wrapper .landing-container .landing-introduction p {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: rift-soft, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 100px;
 }
+
+
+/*
+font-family: acumin-pro-semi-condensed, sans-serif;
+font-weight: 400;
+font-style: normal;
+
+font-family: rift-soft, sans-serif;
+font-weight: 700;
+font-style: italic;
+ */

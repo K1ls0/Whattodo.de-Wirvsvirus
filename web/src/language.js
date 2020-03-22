@@ -1,34 +1,27 @@
-import React from 'react';
+import i18n from 'i18next';
+import {reactI18nextModule} from 'react-i18next';
+import languageEN from "web/src/lang/langEN.json"
+import languageDE from "web/src/lang/langDE.json"
 
-let lang = "ENG";
-
-let dEn = {
-    "t_info": "INFORMATION",
-    "t_recom": "OUR RECOMMENDATIONS"
-};
-
-let dDe = {
-    "t_info": "INFORMATIONEN",
-    "t_recom": "UNSERE EMPFEHLUNGEN"
-};
-
-export const setLang = (l) => {
-    lang = l;
-};
-
-export const toggleLangStatic = () => {
-    if (lang === "ENG") setLang("DE");
-    else setLang("ENG");
-};
-
-export const getText = (key) => {
-    return lang === "ENG" ? dEn[key] : dDe[key];
-};
-
-export class LangComponent extends React.Component {
-    toggleLang() {
-        toggleLangStatic();
-        this.forceUpdate();
+const resources = {
+    en: {
+        translation: languageEN
+    },
+    de: {
+        translation: languageDE
     }
+};
 
-}
+i18n.use(reactI18nextModule) // passes i18n down to react-i18next
+    .init({
+        resources,
+        lng: "de",
+
+        keySeparator: false, // we do not use keys in form messages.welcome
+
+        interpolation: {
+            escapeValue: false // react already safes from xss
+        }
+    }).then(() => {});
+
+export default i18n;

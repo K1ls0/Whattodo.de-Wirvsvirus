@@ -1,22 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import "./stylesheets/styles-main.css";
-import {Header} from "./header.js";
+import {FlexContainerLogo} from "./flex-container-logo";
+import {Landing} from "./landing";
 import {Button} from "./button";
-import {LangComponent} from "./language";
 
-class Source extends LangComponent {
-    constructor(props) {
-        super(props);
-        this.state = {lang: "DE"};
-    }
+const Source = (props) => {
+    return <div>
+        <div className={"header"}>
+            <FlexContainerLogo />
+            <Button />
+        </div>
+        <div className={"content"}>
+            <Landing />
+        </div>
+    </div>
+};
 
-    render() {
-        return <div>
-            <Button className={"button"} lang={this.state.lang} ></Button>
-            <Header className={"header"} lang={this.state.lang} ></Header>
-        </div>;
-    }
-}
-
-ReactDOM.render(<Source lang={"ENG"} />, document.getElementById("root"));
+ReactDOM.render(<Source />, document.getElementById("root"));
