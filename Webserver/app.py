@@ -42,6 +42,7 @@ def routeHome():
 @app.route('/tags', methods=['GET'])
 def getAllTags():
     # specifier = request.args['tags']
+    print(jsonify(sqlAdapt.getAllTags()))
     return jsonify(sqlAdapt.getAllTags())
 
 

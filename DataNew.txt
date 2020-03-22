@@ -1,4 +1,0 @@
->NewTask
-Tag1,Tag2
->NewTask
-Tag1,Tag2
