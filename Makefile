@@ -1,5 +1,11 @@
 install:
 	python -m pip install -r requirements.txt
+	cd web && npm install
+
+clean:
+	cd web && rm -r node_modules
+	cd web && rm package-lock.json
+	cd Webserver/static/react && rm -r ./*
 
 run:
 	cd ./web && npm run build

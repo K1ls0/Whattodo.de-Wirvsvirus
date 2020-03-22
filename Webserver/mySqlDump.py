@@ -1,6 +1,7 @@
 import os
 from config import getConfigInstance
 
+logger = logging.getLogger(__name__)
 config = getConfigInstance()
 
 
@@ -8,11 +9,8 @@ def filterExcluding(data, tags):
     retItems = dict()
     for cKey in data.keys():
         dataStg = data[cKey]
-        print(cKey)
         for cTag in tags:
-            print('\t' + cTag)
             if (cTag in data[cKey]):
-                print('SUCCESSFUL')
                 dataStg = None
                 break
 
